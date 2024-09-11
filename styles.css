@@ -1,33 +1,31 @@
 :root {
   --primary: #89b4fa;
-  /* This is the primary color used throughout the project. */
+  /* This is the primary color. */
   --secondary: #a6e3a1;
-  /* This is the secondary color used for accents. */
+  /* This is the secondary color. */
   --bg: #1e1e2e;
-  /* This is the background color for the entire page. */
+  /* This is the background color. */
   --heading: #cdd6f4;
   /* This is the color for headings. */
   --text: #cdd6f4;
-  /* This is the color for general text. */
+  /* This is the color for text. */
 }
 
 body {
   font-family: Inter, sans-serif;
-  /* Sets the primary font for the page. */
+  /* This sets the font family. */
   line-height: 1.3;
-  /* Sets a comfortable line height for readability. */
+  /* This sets the line height. */
   background-color: var(--bg);
-  /* Applies the background color. */
+  /* This sets the background color. */
   color: var(--text);
-  /* Sets the general text color. */
+  /* This sets the text color. */
 }
 
 html {
   scroll-behavior: smooth;
-  /* Enables smooth scrolling for anchor links. */
 }
 
-/* Section Containers */
 .port_about,
 .port_ed,
 .port_skills,
@@ -36,11 +34,8 @@ html {
 .port_contri,
 .port_projects {
   display: inline-block;
-  /* Elements will display inline, allowing for horizontal arrangement. */
   position: relative;
-  /* Enables absolute positioning of child elements within. */
   color: var(--primary);
-  /* Sets text color to primary throughout these sections. */
 }
 
 .port_about::after,
@@ -51,28 +46,17 @@ html {
 .port_contri::after,
 .port_projects::after {
   content: '';
-  /* Creates a pseudo-element for styling effects. */
   position: absolute;
-  /* Positions the element absolutely within the parent. */
   width: 100%;
-  /* Full width of the parent for the underline effect. */
   transform: scaleX(0);
-  /* Initially hides the underline. */
   height: 2px;
-  /* Sets height of the underline. */
   bottom: 0;
-  /* Aligns to the bottom of the parent element. */
   left: 0;
-  /* Aligns to the left of the parent element. */
   background-color: var(--primary);
-  /* Uses the primary color for the underline. */
   transform-origin: bottom right;
-  /* Sets origin for scaling animation. */
   transition: transform 0.25s ease-out;
-  /* Smooth transition for the underline effect. */
 }
 
-/* Adjusts the underline's appearance on hover */
 .port_about:hover::after,
 .port_skills:hover::after,
 .port_ed:hover::after,
@@ -81,85 +65,82 @@ html {
 .port_contri:hover::after,
 .port_projects:hover::after {
   transform: scaleX(1);
-  /* Shows the underline on hover by scaling. */
   transform-origin: bottom left;
-  /* Changes origin for the hover effect. */
 }
 
-/* Headings Styling */
+
 h1,
 h2,
 h3 {
   color: var(--heading);
-  /* Sets color for all heading levels. */
+  /* This sets the color for headings. */
 }
 
 h1 {
   font-size: 5.5rem;
-  /* Size for large headings (h1). */
+  /* This sets the font size for h1 headings. */
+  /* margin-bottom: 20px; This sets the margin for h1 headings. */
 }
 
 h2 {
   font-size: 4rem;
-  /* Size for secondary headings (h2). */
+  /* This sets the font size for h2 headings. */
+  /* width: 100%; This sets the width for h2 headings. */
+  align-self: center;
+  /* This centers the h2 headings vertically. */
+  text-align: center;
+  /* This centers the h2 headings horizontally. */
 }
 
 h3 {
   font-size: 2.5rem;
-  /* Size for smaller headings (h3). */
+  /* This sets the font size for h3 headings. */
 }
 
-/* General Image Styling */
 img {
   max-width: 100%;
-  /* Ensures images are responsive and fit within their containers. */
+  /* This sets the maximum width for images. */
   border-radius: 10px;
-  /* Adds rounded corners to images. */
+  /* This adds rounded corners to images. */
   border: 2px solid var(--primary);
-  /* Applies a border with the primary color. */
+  /* This adds a border around images. */
 }
 
-/* Logo Styling */
 .logo_syn {
   transition: transform .7s ease-in-out;
-  /* Smooth rotation transition effect. */
   max-width: 200px;
-  /* Maximum width for the profile picture. */
+  /* This sets the maximum width for the Profile Picture. */
   border-radius: 100px;
-  /* Fully rounds the profile picture. */
+  /* This adds rounded corners to the Profile Picture. */
 }
 
 .logo_syn:hover {
   transform: rotate(360deg);
-  /* Rotates the logo on hover. */
 }
 
-/* Header Styles */
+/* Header */
+
 header {
+  /* The header will have a background color of var(--bg). */
   background-color: var(--bg);
-  /* Sets the background color for the header. */
+
+  /* The text in the header will be centered. */
   text-align: center;
-  /* Centers the text in the header. */
+
+  /* There will be padding of 20px at the top and bottom of the header. */
   padding: 20px 0;
-  /* Adds padding above and below the header text. */
 }
 
-/* Navigation Styles */
+
 nav a {
+  /* The nav links will have a margin of 10px, padding of 8px 15px, a border radius of 5px, no text decoration, and a color of var(--text). */
   margin: 10px;
-  /* Adds margin around each navigation link. */
   padding: 8px 15px;
-  /* Adds padding inside the links. */
   border-radius: 5px;
-  /* Rounds the corners of the links. */
   text-decoration: none;
-  /* Removes the underline from links. */
   color: var(--text);
-  /* Sets text color for links. */
   font-size: 200%;
-  /* Increases font size for readability. */
   border-radius: 100rem;
-  /* Fully rounds the navigation link buttons. */
 }
 
 .about_nav,
@@ -167,7 +148,6 @@ nav a {
 .projects_nav,
 .contact_nav {
   transition: box-shadow .3s;
-  /* Smooth transition for shadow effects on hover. */
 }
 
 .about_nav:hover,
@@ -175,104 +155,287 @@ nav a {
 .projects_nav:hover,
 .contact_nav:hover {
   box-shadow: 0 0 100px #89b4fa85;
-  /* Adds a glow effect on hover. */
   background: var(--primary);
-  /* Changes background color on hover. */
   color: var(--bg);
-  /* Sets text color to background color for contrast. */
+  border-radius: 100rem;
 }
 
-/* Contact Section */
+/* Sections */
+
+section {
+  /* The sections will be displayed in a flex container with a flex direction of column and align-items of center. This means that the children of the sections will be displayed one after the other, and the items will be centered vertically. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* About */
+
+#about p {
+  /* The about page paragraph will have a max-width of 800px, a margin of 20px 0, a font size of 1.7rem, and will be text-aligned to the center. */
+  max-width: 800px;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+#about ul {
+  /* The about page unordered list will be displayed in a flex container with justify-content of center, no list-style, and no padding. This means that the list items will be displayed one after the other, and there will be no bullets or spaces between them. */
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+#about li {
+  /* The about page list items will have a margin of 0 10px. This means that there will be no margin to the left and right of the list items, but there will be a margin of 10px to the bottom. */
+  margin: 0 10px;
+}
+
+/* Skills */
+
+
+.fa-linux,
+.fa-python,
+.fa-figma,
+.fa-html5,
+.fa-css3-alt,
+.fa-react,
+.fa-js,
+.fa-node {
+  /* The skill icons will have a font size of clamp(2rem, 5vw, 5rem), a margin of 30px 0, and a color of var(--primary). */
+  font-size: clamp(2rem, 5vw, 5rem);
+  color: var(--primary);
+  transition: color .5s ease-in;
+  transition: text-shadow .3s ease-in;
+  margin: 30px 10px;
+}
+
+.fa-linux:hover,
+.fa-python:hover,
+.fa-figma:hover,
+.fa-html5:hover,
+.fa-css3-alt:hover,
+.fa-react:hover,
+.fa-js:hover,
+.fa-node:hover {
+  color: var(--secondary);
+  text-shadow: 0 0 50px #a6e3a1;
+}
+
+/* This code defines the style for the education section. */
+
+#education {
+  /* The education section will have a max-width of 100% and will be centered on the page. */
+  max-width: 100%;
+  text-align: center;
+  align-items: center;
+
+  /* The margin attribute has been commented out because it is not necessary. */
+  /* margin: 0 auto; */
+}
+
+#education h2 {
+  /* The h2 headings in the education section will have a margin-bottom of 30px and will be displayed full-width. */
+  max-width: 100%;
+}
+
+#education h3 {
+  /* The h3 headings in the education section will have a margin-bottom of 10px and will be displayed full-width. */
+  max-width: 100%;
+}
+
+#education p {
+  /* The paragraphs in the education section will have a line-height of 1.6, will be displayed full-width, and will have a font size of 180%. */
+  line-height: 1;
+  max-width: 100%;
+  font-size: 180%;
+  color: #7f849c;
+}
+
+#education ul {
+  /* The unordered lists in the education section will have no list-style and will be displayed full-width. */
+  list-style: none;
+  max-width: 100%;
+
+  /* The padding-left attribute has been commented out because it is not necessary. */
+  /* padding-left: 0; */
+}
+
+#education li {
+  /* The list items in the education section will have a line-height of 1.8 and will be displayed full-width. */
+  line-height: 1;
+  max-width: 100%;
+}
+
+/* This media query defines the style for the education section when the screen width is less than 600px. */
+
+@media (max-width: 600px) {
+
+  /* The education section will have padding of 20px. */
+  #education {
+    padding: 20px;
+  }
+
+  /* The h2 headings in the education section will have a font size of 28px. */
+  #education h2 {
+    font-size: 28px;
+  }
+
+  /* The h3 headings in the education section will have a font size of 20px. */
+  #education h3 {
+    font-size: 20px;
+  }
+
+}
+
+/* This code defines the style for the projects section. */
+
+/* Projects Container */
+
+.projects {
+  /* The projects container will have overflow-x: auto, overflow-y: hidden, and white-space: nowrap. This will allow the projects to scroll horizontally if they are too wide to fit on the screen. */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  /* The projects container will be centered on the page and will have a max-width of 1000px. */
+  margin: 0 auto;
+  max-width: 1000px;
+
+  /* The projects container will have padding of 20px. */
+  padding: 20px;
+}
+
+.contributions {
+  /* The projects container will have overflow-x: auto, overflow-y: hidden, and white-space: nowrap. This will allow the projects to scroll horizontally if they are too wide to fit on the screen. */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  /* The projects container will be centered on the page and will have a max-width of 1000px. */
+  margin: 0 auto;
+  max-width: 1000px;
+
+  /* The projects container will have padding of 20px. */
+  padding: 20px;
+}
+
+/* Individual Projects */
+
+.project {
+  /* Each project will be displayed as an inline-block element with a width of 300px and a vertical alignment of top. It will also have a margin-right of 20px, a background color of #38355c, and rounded borders with a radius of 10px. */
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+  margin-right: 20px;
+  background-color: #313244;
+  border-radius: 10px;
+  border: #45475a 3px solid;
+
+  /* The project will have padding of 20px between the content. */
+  padding: 20px;
+}
+
+/* Remove margin from last project */
+
+.project:last-child {
+  /* The last project will not have a margin-right of 20px. */
+  margin-right: 0;
+}
+
+/* Project Content Styling */
+
+.project h3 {
+  /* The h3 headings for each project will have a margin-top of 10px and a font size of 1.3rem. */
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.project p {
+  /* The paragraphs for each project will have a color of #8c87a2. */
+  color: #7f849c;
+}
+
+.contribution {
+  /* Each project will be displayed as an inline-block element with a width of 300px and a vertical alignment of top. It will also have a margin-right of 20px, a background color of #38355c, and rounded borders with a radius of 10px. */
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+  margin-right: 20px;
+  background-color: #313244;
+  border-radius: 10px;
+  border: #45475a 3px solid;
+
+  /* The project will have padding of 20px between the content. */
+  padding: 20px;
+}
+
+/* Remove margin from last project */
+
+.contribution:last-child {
+  /* The last project will not have a margin-right of 20px. */
+  margin-right: 0;
+}
+
+/* Project Content Styling */
+
+.contribution h3 {
+  /* The h3 headings for each project will have a margin-top of 10px and a font size of 1.3rem. */
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.contribution p {
+  /* The paragraphs for each project will have a color of #8c87a2. */
+  color: #7f849c;
+}
+
+
+
+/* This code defines the style for the contact section. */
+
+/* Contact */
+
 #contact p {
+  /* The paragraphs in the contact section will have a margin of 10px 0 and a font size of 1.4rem. */
   margin: 10px 0;
-  /* Margins above and below contact paragraphs. */
   font-size: 1.4rem;
-  /* Increases font size for readability. */
 }
 
 #contact a {
+  /* The links in the contact section will be aligned to the center and will have text-align: center. */
   align-items: center;
-  /* Centers content within the contact links. */
   text-align: center;
-  /* Centers text in the contact links. */
 }
 
 #contact i {
+  /* The icons in the contact section will have a color of var(--secondary) and will have a margin-right of 10px. */
   color: var(--secondary);
-  /* Sets icon color for contact items. */
   margin-right: 10px;
-  /* Adds space between icon and text. */
 }
 
-/* Projects Section */
-.projects,
-.contributions {
-  overflow-x: auto;
-  /* Enables horizontal scrolling if needed. */
-  overflow-y: hidden;
-  /* Hides vertical overflow. */
-  white-space: nowrap;
-  /* Prevents line breaks for children. */
-  margin: 0 auto;
-  /* Centers the container. */
-  max-width: 1000px;
-  /* Sets a maximum width for the container. */
-  padding: 20px;
-  /* Adds padding inside the container. */
-}
 
-.project,
-.contribution {
-  display: inline-block;
-  /* Allows for inline display of projects. */
-  width: 300px;
-  /* Sets a fixed width for each project card. */
-  vertical-align: top;
-  /* Aligns project cards at the top. */
-  margin-right: 20px;
-  /* Adds space between project cards. */
-  background-color: #313244;
-  /* Sets background color for project cards. */
-  border-radius: 10px;
-  /* Rounds the corners of project cards. */
-  border: #45475a 3px solid;
-  /* Applies a border around project cards. */
-  padding: 20px;
-  /* Adds padding inside project cards. */
-}
-
-.project:last-child,
-.contribution:last-child {
-  margin-right: 0;
-  /* Removes margin from the last project or contribution. */
+.last-contact-item,
+.footer {
+  padding-bottom: 20px;
 }
 
 /* Media Queries */
+
 @media (max-width: 600px) {
+
+  /* The header will change to a flex direction of column when the screen width is less than 600px. */
   header {
     flex-direction: column;
-    /* Stacks header contents vertically on small screens. */
   }
 
+  /* The about image will change to a width of 180px and will be aligned to the center when the screen width is less than 600px. */
   #about img {
     width: 180px;
-    /* Sets a specific width for the about image on small screens. */
     align-self: center;
-    /* Centers the image in its container. */
   }
 
-  #education {
-    padding: 20px;
-    /* Adds padding to the education section. */
-  }
 
-  #education h2 {
-    font-size: 28px;
-    /* Specific font size for h2 headings in education. */
-  }
 
-  #education h3 {
-    font-size: 20px;
-    /* Specific font size for h3 headings in education. */
-  }
+
 }
