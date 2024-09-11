@@ -79,13 +79,11 @@ h3 {
 h1 {
   font-size: 5.5rem;
   /* This sets the font size for h1 headings. */
-  /* margin-bottom: 20px; This sets the margin for h1 headings. */
 }
 
 h2 {
   font-size: 4rem;
   /* This sets the font size for h2 headings. */
-  /* width: 100%; This sets the width for h2 headings. */
   align-self: center;
   /* This centers the h2 headings vertically. */
   text-align: center;
@@ -202,7 +200,7 @@ section {
 .fa-react,
 .fa-js,
 .fa-node {
-  /* The skill icons will have a font size of clamp(2rem, 5vw, 5rem), a margin of 30px 0, and a color of var(--primary). */
+  /* The skill icons will have a font size of clamp(2rem, 5vw, 5rem), a margin of 30px 10px, and a color of var(--primary). */
   font-size: clamp(2rem, 5vw, 5rem);
   color: var(--primary);
   transition: color .5s ease-in;
@@ -245,7 +243,7 @@ section {
 }
 
 #education p {
-  /* The paragraphs in the education section will have a line-height of 1.6, will be displayed full-width, and will have a font size of 180%. */
+  /* The paragraphs in the education section will have a line-height of 1, will be displayed full-width, and will have a font size of 180%. */
   line-height: 1;
   max-width: 100%;
   font-size: 180%;
@@ -352,12 +350,12 @@ section {
 }
 
 .project p {
-  /* The paragraphs for each project will have a color of #8c87a2. */
+  /* The paragraphs for each project will have a color of #7f849c. */
   color: #7f849c;
 }
 
 .contribution {
-  /* Each project will be displayed as an inline-block element with a width of 300px and a vertical alignment of top. It will also have a margin-right of 20px, a background color of #38355c, and rounded borders with a radius of 10px. */
+  /* Each project will be displayed as an inline-block element with a width of 300px and a vertical alignment of top. It will also have a margin-right of 20px, a background color of #313244, and rounded borders with a radius of 10px. */
   display: inline-block;
   width: 300px;
   vertical-align: top;
@@ -386,7 +384,7 @@ section {
 }
 
 .contribution p {
-  /* The paragraphs for each project will have a color of #8c87a2. */
+  /* The paragraphs for each project will have a color of #7f849c. */
   color: #7f849c;
 }
 
